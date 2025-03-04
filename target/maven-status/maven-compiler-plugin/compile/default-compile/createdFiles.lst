@@ -1,0 +1,6 @@
+pom/LoginPage.class
+pom/CollectionDashboard.class
+utility/Utility.class
+utility/DesiredCapabilities.class
+utility/UIActions.class
+utility/Driver.class

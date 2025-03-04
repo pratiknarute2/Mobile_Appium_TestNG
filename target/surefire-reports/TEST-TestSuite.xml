@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="TestSuite" time="113.048" tests="3" errors="0" skipped="0" failures="1">
+  <properties>
+    <property name="java.specification.version" value="17"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/Users/testingautomation/Lyca/Mobile_Automation/target/test-classes:/Users/testingautomation/Lyca/Mobile_Automation/target/classes:/Users/testingautomation/.m2/repository/io/cucumber/cucumber-core/7.4.1/cucumber-core-7.4.1.jar:/Users/testingautomation/.m2/repository/io/cucumber/cucumber-gherkin/7.4.1/cucumber-gherkin-7.4.1.jar:/Users/testingautomation/.m2/repository/io/cucumber/cucumber-gherkin-messages/7.4.1/cucumber-gherkin-messages-7.4.1.jar:/Users/testingautomation/.m2/repository/io/cucumber/gherkin/23.0.1/gherkin-23.0.1.jar:/Users/testingautomation/.m2/repository/io/cucumber/messages/18.0.0/messages-18.0.0.jar:/Users/testingautomation/.m2/repository/io/cucumber/tag-expressions/4.1.0/tag-expressions-4.1.0.jar:/Users/testingautomation/.m2/repository/io/cucumber/cucumber-expressions/16.0.0/cucumber-expressions-16.0.0.jar:/Users/testingautomation/.m2/repository/io/cucumber/datatable/7.4.1/datatable-7.4.1.jar:/Users/testingautomation/.m2/repository/io/cucumber/cucumber-plugin/7.4.1/cucumber-plugin-7.4.1.jar:/Users/testingautomation/.m2/repository/io/cucumber/docstring/7.4.1/docstring-7.4.1.jar:/Users/testingautomation/.m2/repository/io/cucumber/html-formatter/19.2.0/html-formatter-19.2.0.jar:/Users/testingautomation/.m2/repository/io/cucumber/ci-environment/9.0.4/ci-environment-9.0.4.jar:/Users/testingautomation/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/testingautomation/.m2/repository/io/cucumber/cucumber-java/7.16.1/cucumber-java-7.16.1.jar:/Users/testingautomation/.m2/repository/io/cucumber/cucumber-junit/7.4.1/cucumber-junit-7.4.1.jar:/Users/testingautomation/.m2/repository/org/seleniumhq/selenium/selenium-java/4.11.0/selenium-java-4.11.0.jar:/Users/testingautomation/.m2/repository/org/seleniumhq/selenium/selenium-api/4.11.0/selenium-api-4.11.0.jar:/Users/testingautomation/.m2/repository/org/seleniumhq/selenium/selenium-chrome-driver/4.11.0/selenium-chrome-driver-4.11.0.jar:/Users/testingautomation/.m2/repository/com/google/auto/service/auto-service-annotations/1.0.1/auto-service-annotations-1.0.1.jar:/Users/testingautomation/.m2/repository/com/google/guava/guava/31.1-jre/guava-31.1-jre.jar:/Users/testingautomation/.m2/repository/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1.jar:/Users/testingautomation/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/Users/testingautomation/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/Users/testingautomation/.m2/repository/org/checkerframework/checker-qual/3.12.0/checker-qual-3.12.0.jar:/Users/testingautomation/.m2/repository/com/google/errorprone/error_prone_annotations/2.11.0/error_prone_annotations-2.11.0.jar:/Users/testingautomation/.m2/repository/com/google/j2objc/j2objc-annotations/1.3/j2objc-annotations-1.3.jar:/Users/testingautomation/.m2/repository/org/seleniumhq/selenium/selenium-chromium-driver/4.11.0/selenium-chromium-driver-4.11.0.jar:/Users/testingautomation/.m2/repository/org/seleniumhq/selenium/selenium-json/4.11.0/selenium-json-4.11.0.jar:/Users/testingautomation/.m2/repository/org/seleniumhq/selenium/selenium-manager/4.11.0/selenium-manager-4.11.0.jar:/Users/testingautomation/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v113/4.11.0/selenium-devtools-v113-4.11.0.jar:/Users/testingautomation/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v114/4.11.0/selenium-devtools-v114-4.11.0.jar:/Users/testingautomation/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v115/4.11.0/selenium-devtools-v115-4.11.0.jar:/Users/testingautomation/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v85/4.11.0/selenium-devtools-v85-4.11.0.jar:/Users/testingautomation/.m2/repository/org/seleniumhq/selenium/selenium-edge-driver/4.11.0/selenium-edge-driver-4.11.0.jar:/Users/testingautomation/.m2/repository/org/seleniumhq/selenium/selenium-firefox-driver/4.11.0/selenium-firefox-driver-4.11.0.jar:/Users/testingautomation/.m2/repository/org/seleniumhq/selenium/selenium-http/4.11.0/selenium-http-4.11.0.jar:/Users/testingautomation/.m2/repository/dev/failsafe/failsafe/3.3.1/failsafe-3.3.1.jar:/Users/testingautomation/.m2/repository/org/seleniumhq/selenium/selenium-ie-driver/4.11.0/selenium-ie-driver-4.11.0.jar:/Users/testingautomation/.m2/repository/org/seleniumhq/selenium/selenium-remote-driver/4.11.0/selenium-remote-driver-4.11.0.jar:/Users/testingautomation/.m2/repository/io/netty/netty-buffer/4.1.92.Final/netty-buffer-4.1.92.Final.jar:/Users/testingautomation/.m2/repository/io/netty/netty-codec-http/4.1.92.Final/netty-codec-http-4.1.92.Final.jar:/Users/testingautomation/.m2/repository/io/netty/netty-codec/4.1.92.Final/netty-codec-4.1.92.Final.jar:/Users/testingautomation/.m2/repository/io/netty/netty-handler/4.1.92.Final/netty-handler-4.1.92.Final.jar:/Users/testingautomation/.m2/repository/io/netty/netty-common/4.1.92.Final/netty-common-4.1.92.Final.jar:/Users/testingautomation/.m2/repository/io/netty/netty-transport-classes-epoll/4.1.92.Final/netty-transport-classes-epoll-4.1.92.Final.jar:/Users/testingautomation/.m2/repository/io/netty/netty-transport-classes-kqueue/4.1.92.Final/netty-transport-classes-kqueue-4.1.92.Final.jar:/Users/testingautomation/.m2/repository/io/netty/netty-transport-native-epoll/4.1.92.Final/netty-transport-native-epoll-4.1.92.Final.jar:/Users/testingautomation/.m2/repository/io/netty/netty-transport-native-kqueue/4.1.92.Final/netty-transport-native-kqueue-4.1.92.Final.jar:/Users/testingautomation/.m2/repository/io/netty/netty-transport-native-unix-common/4.1.92.Final/netty-transport-native-unix-common-4.1.92.Final.jar:/Users/testingautomation/.m2/repository/io/netty/netty-transport/4.1.92.Final/netty-transport-4.1.92.Final.jar:/Users/testingautomation/.m2/repository/io/netty/netty-resolver/4.1.92.Final/netty-resolver-4.1.92.Final.jar:/Users/testingautomation/.m2/repository/io/opentelemetry/opentelemetry-api/1.26.0/opentelemetry-api-1.26.0.jar:/Users/testingautomation/.m2/repository/io/opentelemetry/opentelemetry-context/1.26.0/opentelemetry-context-1.26.0.jar:/Users/testingautomation/.m2/repository/io/opentelemetry/opentelemetry-exporter-logging/1.26.0/opentelemetry-exporter-logging-1.26.0.jar:/Users/testingautomation/.m2/repository/io/opentelemetry/opentelemetry-sdk-metrics/1.26.0/opentelemetry-sdk-metrics-1.26.0.jar:/Users/testingautomation/.m2/repository/io/opentelemetry/opentelemetry-extension-incubator/1.26.0-alpha/opentelemetry-extension-incubator-1.26.0-alpha.jar:/Users/testingautomation/.m2/repository/io/opentelemetry/opentelemetry-sdk-logs/1.26.0-alpha/opentelemetry-sdk-logs-1.26.0-alpha.jar:/Users/testingautomation/.m2/repository/io/opentelemetry/opentelemetry-api-logs/1.26.0-alpha/opentelemetry-api-logs-1.26.0-alpha.jar:/Users/testingautomation/.m2/repository/io/opentelemetry/opentelemetry-api-events/1.26.0-alpha/opentelemetry-api-events-1.26.0-alpha.jar:/Users/testingautomation/.m2/repository/io/opentelemetry/opentelemetry-sdk-common/1.26.0/opentelemetry-sdk-common-1.26.0.jar:/Users/testingautomation/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure-spi/1.26.0/opentelemetry-sdk-extension-autoconfigure-spi-1.26.0.jar:/Users/testingautomation/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure/1.26.0-alpha/opentelemetry-sdk-extension-autoconfigure-1.26.0-alpha.jar:/Users/testingautomation/.m2/repository/io/opentelemetry/opentelemetry-sdk-trace/1.26.0/opentelemetry-sdk-trace-1.26.0.jar:/Users/testingautomation/.m2/repository/io/opentelemetry/opentelemetry-sdk/1.26.0/opentelemetry-sdk-1.26.0.jar:/Users/testingautomation/.m2/repository/io/opentelemetry/opentelemetry-semconv/1.26.0-alpha/opentelemetry-semconv-1.26.0-alpha.jar:/Users/testingautomation/.m2/repository/net/bytebuddy/byte-buddy/1.14.4/byte-buddy-1.14.4.jar:/Users/testingautomation/.m2/repository/org/apache/commons/commons-exec/1.3/commons-exec-1.3.jar:/Users/testingautomation/.m2/repository/org/asynchttpclient/async-http-client/2.12.3/async-http-client-2.12.3.jar:/Users/testingautomation/.m2/repository/org/asynchttpclient/async-http-client-netty-utils/2.12.3/async-http-client-netty-utils-2.12.3.jar:/Users/testingautomation/.m2/repository/io/netty/netty-codec-socks/4.1.60.Final/netty-codec-socks-4.1.60.Final.jar:/Users/testingautomation/.m2/repository/io/netty/netty-handler-proxy/4.1.60.Final/netty-handler-proxy-4.1.60.Final.jar:/Users/testingautomation/.m2/repository/io/netty/netty-transport-native-epoll/4.1.60.Final/netty-transport-native-epoll-4.1.60.Final-linux-x86_64.jar:/Users/testingautomation/.m2/repository/io/netty/netty-transport-native-kqueue/4.1.60.Final/netty-transport-native-kqueue-4.1.60.Final-osx-x86_64.jar:/Users/testingautomation/.m2/repository/com/typesafe/netty/netty-reactive-streams/2.0.4/netty-reactive-streams-2.0.4.jar:/Users/testingautomation/.m2/repository/com/sun/activation/jakarta.activation/1.2.2/jakarta.activation-1.2.2.jar:/Users/testingautomation/.m2/repository/org/seleniumhq/selenium/selenium-safari-driver/4.11.0/selenium-safari-driver-4.11.0.jar:/Users/testingautomation/.m2/repository/org/seleniumhq/selenium/selenium-support/4.11.0/selenium-support-4.11.0.jar:/Users/testingautomation/.m2/repository/io/github/bonigarcia/webdrivermanager/5.8.0/webdrivermanager-5.8.0.jar:/Users/testingautomation/.m2/repository/com/google/code/gson/gson/2.10.1/gson-2.10.1.jar:/Users/testingautomation/.m2/repository/com/github/docker-java/docker-java/3.3.6/docker-java-3.3.6.jar:/Users/testingautomation/.m2/repository/com/github/docker-java/docker-java-core/3.3.6/docker-java-core-3.3.6.jar:/Users/testingautomation/.m2/repository/com/github/docker-java/docker-java-api/3.3.6/docker-java-api-3.3.6.jar:/Users/testingautomation/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.10.3/jackson-annotations-2.10.3.jar:/Users/testingautomation/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.10.3/jackson-databind-2.10.3.jar:/Users/testingautomation/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.10.3/jackson-core-2.10.3.jar:/Users/testingautomation/.m2/repository/org/bouncycastle/bcpkix-jdk18on/1.76/bcpkix-jdk18on-1.76.jar:/Users/testingautomation/.m2/repository/org/bouncycastle/bcprov-jdk18on/1.76/bcprov-jdk18on-1.76.jar:/Users/testingautomation/.m2/repository/org/bouncycastle/bcutil-jdk18on/1.76/bcutil-jdk18on-1.76.jar:/Users/testingautomation/.m2/repository/org/slf4j/jcl-over-slf4j/1.7.30/jcl-over-slf4j-1.7.30.jar:/Users/testingautomation/.m2/repository/com/github/docker-java/docker-java-transport-httpclient5/3.3.6/docker-java-transport-httpclient5-3.3.6.jar:/Users/testingautomation/.m2/repository/com/github/docker-java/docker-java-transport/3.3.6/docker-java-transport-3.3.6.jar:/Users/testingautomation/.m2/repository/net/java/dev/jna/jna/5.13.0/jna-5.13.0.jar:/Users/testingautomation/.m2/repository/org/brotli/dec/0.1.2/dec-0.1.2.jar:/Users/testingautomation/.m2/repository/org/apache/commons/commons-lang3/3.14.0/commons-lang3-3.14.0.jar:/Users/testingautomation/.m2/repository/org/apache/commons/commons-compress/1.26.1/commons-compress-1.26.1.jar:/Users/testingautomation/.m2/repository/org/apache/httpcomponents/client5/httpclient5/5.2.1/httpclient5-5.2.1.jar:/Users/testingautomation/.m2/repository/org/apache/httpcomponents/core5/httpcore5/5.2/httpcore5-5.2.jar:/Users/testingautomation/.m2/repository/org/apache/httpcomponents/core5/httpcore5-h2/5.2/httpcore5-h2-5.2.jar:/Users/testingautomation/.m2/repository/com/aventstack/extentreports/5.1.2/extentreports-5.1.2.jar:/Users/testingautomation/.m2/repository/io/reactivex/rxjava3/rxjava/3.1.6/rxjava-3.1.6.jar:/Users/testingautomation/.m2/repository/org/reactivestreams/reactive-streams/1.0.4/reactive-streams-1.0.4.jar:/Users/testingautomation/.m2/repository/org/freemarker/freemarker/2.3.32/freemarker-2.3.32.jar:/Users/testingautomation/.m2/repository/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.jar:/Users/testingautomation/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/Users/testingautomation/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/Users/testingautomation/.m2/repository/org/testng/testng/7.7.1/testng-7.7.1.jar:/Users/testingautomation/.m2/repository/com/beust/jcommander/1.82/jcommander-1.82.jar:/Users/testingautomation/.m2/repository/org/webjars/jquery/3.6.1/jquery-3.6.1.jar:/Users/testingautomation/.m2/repository/io/appium/java-client/8.3.0/java-client-8.3.0.jar:/Users/testingautomation/.m2/repository/cglib/cglib/3.3.0/cglib-3.3.0.jar:/Users/testingautomation/.m2/repository/org/ow2/asm/asm/7.1/asm-7.1.jar:/Users/testingautomation/.m2/repository/commons-validator/commons-validator/1.7/commons-validator-1.7.jar:/Users/testingautomation/.m2/repository/commons-beanutils/commons-beanutils/1.9.4/commons-beanutils-1.9.4.jar:/Users/testingautomation/.m2/repository/commons-digester/commons-digester/2.1/commons-digester-2.1.jar:/Users/testingautomation/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/Users/testingautomation/.m2/repository/commons-collections/commons-collections/3.2.2/commons-collections-3.2.2.jar:/Users/testingautomation/.m2/repository/org/apache/poi/poi/5.2.2/poi-5.2.2.jar:/Users/testingautomation/.m2/repository/commons-codec/commons-codec/1.15/commons-codec-1.15.jar:/Users/testingautomation/.m2/repository/org/apache/commons/commons-collections4/4.4/commons-collections4-4.4.jar:/Users/testingautomation/.m2/repository/org/apache/commons/commons-math3/3.6.1/commons-math3-3.6.1.jar:/Users/testingautomation/.m2/repository/com/zaxxer/SparseBitSet/1.2/SparseBitSet-1.2.jar:/Users/testingautomation/.m2/repository/org/apache/logging/log4j/log4j-api/2.17.2/log4j-api-2.17.2.jar:/Users/testingautomation/.m2/repository/org/apache/poi/poi-ooxml/5.2.3/poi-ooxml-5.2.3.jar:/Users/testingautomation/.m2/repository/org/apache/poi/poi-ooxml-lite/5.2.3/poi-ooxml-lite-5.2.3.jar:/Users/testingautomation/.m2/repository/org/apache/xmlbeans/xmlbeans/5.1.1/xmlbeans-5.1.1.jar:/Users/testingautomation/.m2/repository/com/github/virtuald/curvesapi/1.07/curvesapi-1.07.jar:/Users/testingautomation/.m2/repository/commons-io/commons-io/2.13.0/commons-io-2.13.0.jar:/Users/testingautomation/.m2/repository/org/projectlombok/lombok/1.18.24/lombok-1.18.24.jar:"/>
+    <property name="java.vm.vendor" value="Amazon.com Inc."/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="ANDROID_HOME" value="/Users/testingautomation/Library/Android/sdk"/>
+    <property name="java.vendor.url" value="https://aws.amazon.com/corretto/"/>
+    <property name="user.timezone" value="Asia/Kolkata"/>
+    <property name="suiteXmlFile" value="src/test/Resources/TestNG/testNG.xml"/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="java.vm.specification.version" value="17"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="IN"/>
+    <property name="sun.boot.library.path" value="/Users/testingautomation/Library/Java/JavaVirtualMachines/corretto-17.0.11/Contents/Home/lib"/>
+    <property name="sun.java.command" value="/Users/testingautomation/Lyca/Mobile_Automation/target/surefire/surefirebooter-20250224171710185_3.jar /Users/testingautomation/Lyca/Mobile_Automation/target/surefire 2025-02-24T17-17-10_112-jvmRun1 surefire-20250224171710185_1tmp surefire_0-20250224171710185_2tmp"/>
+    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="/Users/testingautomation/Lyca/Mobile_Automation/target/test-classes:/Users/testingautomation/Lyca/Mobile_Automation/target/classes:/Users/testingautomation/.m2/repository/io/cucumber/cucumber-core/7.4.1/cucumber-core-7.4.1.jar:/Users/testingautomation/.m2/repository/io/cucumber/cucumber-gherkin/7.4.1/cucumber-gherkin-7.4.1.jar:/Users/testingautomation/.m2/repository/io/cucumber/cucumber-gherkin-messages/7.4.1/cucumber-gherkin-messages-7.4.1.jar:/Users/testingautomation/.m2/repository/io/cucumber/gherkin/23.0.1/gherkin-23.0.1.jar:/Users/testingautomation/.m2/repository/io/cucumber/messages/18.0.0/messages-18.0.0.jar:/Users/testingautomation/.m2/repository/io/cucumber/tag-expressions/4.1.0/tag-expressions-4.1.0.jar:/Users/testingautomation/.m2/repository/io/cucumber/cucumber-expressions/16.0.0/cucumber-expressions-16.0.0.jar:/Users/testingautomation/.m2/repository/io/cucumber/datatable/7.4.1/datatable-7.4.1.jar:/Users/testingautomation/.m2/repository/io/cucumber/cucumber-plugin/7.4.1/cucumber-plugin-7.4.1.jar:/Users/testingautomation/.m2/repository/io/cucumber/docstring/7.4.1/docstring-7.4.1.jar:/Users/testingautomation/.m2/repository/io/cucumber/html-formatter/19.2.0/html-formatter-19.2.0.jar:/Users/testingautomation/.m2/repository/io/cucumber/ci-environment/9.0.4/ci-environment-9.0.4.jar:/Users/testingautomation/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/testingautomation/.m2/repository/io/cucumber/cucumber-java/7.16.1/cucumber-java-7.16.1.jar:/Users/testingautomation/.m2/repository/io/cucumber/cucumber-junit/7.4.1/cucumber-junit-7.4.1.jar:/Users/testingautomation/.m2/repository/org/seleniumhq/selenium/selenium-java/4.11.0/selenium-java-4.11.0.jar:/Users/testingautomation/.m2/repository/org/seleniumhq/selenium/selenium-api/4.11.0/selenium-api-4.11.0.jar:/Users/testingautomation/.m2/repository/org/seleniumhq/selenium/selenium-chrome-driver/4.11.0/selenium-chrome-driver-4.11.0.jar:/Users/testingautomation/.m2/repository/com/google/auto/service/auto-service-annotations/1.0.1/auto-service-annotations-1.0.1.jar:/Users/testingautomation/.m2/repository/com/google/guava/guava/31.1-jre/guava-31.1-jre.jar:/Users/testingautomation/.m2/repository/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1.jar:/Users/testingautomation/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/Users/testingautomation/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/Users/testingautomation/.m2/repository/org/checkerframework/checker-qual/3.12.0/checker-qual-3.12.0.jar:/Users/testingautomation/.m2/repository/com/google/errorprone/error_prone_annotations/2.11.0/error_prone_annotations-2.11.0.jar:/Users/testingautomation/.m2/repository/com/google/j2objc/j2objc-annotations/1.3/j2objc-annotations-1.3.jar:/Users/testingautomation/.m2/repository/org/seleniumhq/selenium/selenium-chromium-driver/4.11.0/selenium-chromium-driver-4.11.0.jar:/Users/testingautomation/.m2/repository/org/seleniumhq/selenium/selenium-json/4.11.0/selenium-json-4.11.0.jar:/Users/testingautomation/.m2/repository/org/seleniumhq/selenium/selenium-manager/4.11.0/selenium-manager-4.11.0.jar:/Users/testingautomation/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v113/4.11.0/selenium-devtools-v113-4.11.0.jar:/Users/testingautomation/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v114/4.11.0/selenium-devtools-v114-4.11.0.jar:/Users/testingautomation/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v115/4.11.0/selenium-devtools-v115-4.11.0.jar:/Users/testingautomation/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v85/4.11.0/selenium-devtools-v85-4.11.0.jar:/Users/testingautomation/.m2/repository/org/seleniumhq/selenium/selenium-edge-driver/4.11.0/selenium-edge-driver-4.11.0.jar:/Users/testingautomation/.m2/repository/org/seleniumhq/selenium/selenium-firefox-driver/4.11.0/selenium-firefox-driver-4.11.0.jar:/Users/testingautomation/.m2/repository/org/seleniumhq/selenium/selenium-http/4.11.0/selenium-http-4.11.0.jar:/Users/testingautomation/.m2/repository/dev/failsafe/failsafe/3.3.1/failsafe-3.3.1.jar:/Users/testingautomation/.m2/repository/org/seleniumhq/selenium/selenium-ie-driver/4.11.0/selenium-ie-driver-4.11.0.jar:/Users/testingautomation/.m2/repository/org/seleniumhq/selenium/selenium-remote-driver/4.11.0/selenium-remote-driver-4.11.0.jar:/Users/testingautomation/.m2/repository/io/netty/netty-buffer/4.1.92.Final/netty-buffer-4.1.92.Final.jar:/Users/testingautomation/.m2/repository/io/netty/netty-codec-http/4.1.92.Final/netty-codec-http-4.1.92.Final.jar:/Users/testingautomation/.m2/repository/io/netty/netty-codec/4.1.92.Final/netty-codec-4.1.92.Final.jar:/Users/testingautomation/.m2/repository/io/netty/netty-handler/4.1.92.Final/netty-handler-4.1.92.Final.jar:/Users/testingautomation/.m2/repository/io/netty/netty-common/4.1.92.Final/netty-common-4.1.92.Final.jar:/Users/testingautomation/.m2/repository/io/netty/netty-transport-classes-epoll/4.1.92.Final/netty-transport-classes-epoll-4.1.92.Final.jar:/Users/testingautomation/.m2/repository/io/netty/netty-transport-classes-kqueue/4.1.92.Final/netty-transport-classes-kqueue-4.1.92.Final.jar:/Users/testingautomation/.m2/repository/io/netty/netty-transport-native-epoll/4.1.92.Final/netty-transport-native-epoll-4.1.92.Final.jar:/Users/testingautomation/.m2/repository/io/netty/netty-transport-native-kqueue/4.1.92.Final/netty-transport-native-kqueue-4.1.92.Final.jar:/Users/testingautomation/.m2/repository/io/netty/netty-transport-native-unix-common/4.1.92.Final/netty-transport-native-unix-common-4.1.92.Final.jar:/Users/testingautomation/.m2/repository/io/netty/netty-transport/4.1.92.Final/netty-transport-4.1.92.Final.jar:/Users/testingautomation/.m2/repository/io/netty/netty-resolver/4.1.92.Final/netty-resolver-4.1.92.Final.jar:/Users/testingautomation/.m2/repository/io/opentelemetry/opentelemetry-api/1.26.0/opentelemetry-api-1.26.0.jar:/Users/testingautomation/.m2/repository/io/opentelemetry/opentelemetry-context/1.26.0/opentelemetry-context-1.26.0.jar:/Users/testingautomation/.m2/repository/io/opentelemetry/opentelemetry-exporter-logging/1.26.0/opentelemetry-exporter-logging-1.26.0.jar:/Users/testingautomation/.m2/repository/io/opentelemetry/opentelemetry-sdk-metrics/1.26.0/opentelemetry-sdk-metrics-1.26.0.jar:/Users/testingautomation/.m2/repository/io/opentelemetry/opentelemetry-extension-incubator/1.26.0-alpha/opentelemetry-extension-incubator-1.26.0-alpha.jar:/Users/testingautomation/.m2/repository/io/opentelemetry/opentelemetry-sdk-logs/1.26.0-alpha/opentelemetry-sdk-logs-1.26.0-alpha.jar:/Users/testingautomation/.m2/repository/io/opentelemetry/opentelemetry-api-logs/1.26.0-alpha/opentelemetry-api-logs-1.26.0-alpha.jar:/Users/testingautomation/.m2/repository/io/opentelemetry/opentelemetry-api-events/1.26.0-alpha/opentelemetry-api-events-1.26.0-alpha.jar:/Users/testingautomation/.m2/repository/io/opentelemetry/opentelemetry-sdk-common/1.26.0/opentelemetry-sdk-common-1.26.0.jar:/Users/testingautomation/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure-spi/1.26.0/opentelemetry-sdk-extension-autoconfigure-spi-1.26.0.jar:/Users/testingautomation/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure/1.26.0-alpha/opentelemetry-sdk-extension-autoconfigure-1.26.0-alpha.jar:/Users/testingautomation/.m2/repository/io/opentelemetry/opentelemetry-sdk-trace/1.26.0/opentelemetry-sdk-trace-1.26.0.jar:/Users/testingautomation/.m2/repository/io/opentelemetry/opentelemetry-sdk/1.26.0/opentelemetry-sdk-1.26.0.jar:/Users/testingautomation/.m2/repository/io/opentelemetry/opentelemetry-semconv/1.26.0-alpha/opentelemetry-semconv-1.26.0-alpha.jar:/Users/testingautomation/.m2/repository/net/bytebuddy/byte-buddy/1.14.4/byte-buddy-1.14.4.jar:/Users/testingautomation/.m2/repository/org/apache/commons/commons-exec/1.3/commons-exec-1.3.jar:/Users/testingautomation/.m2/repository/org/asynchttpclient/async-http-client/2.12.3/async-http-client-2.12.3.jar:/Users/testingautomation/.m2/repository/org/asynchttpclient/async-http-client-netty-utils/2.12.3/async-http-client-netty-utils-2.12.3.jar:/Users/testingautomation/.m2/repository/io/netty/netty-codec-socks/4.1.60.Final/netty-codec-socks-4.1.60.Final.jar:/Users/testingautomation/.m2/repository/io/netty/netty-handler-proxy/4.1.60.Final/netty-handler-proxy-4.1.60.Final.jar:/Users/testingautomation/.m2/repository/io/netty/netty-transport-native-epoll/4.1.60.Final/netty-transport-native-epoll-4.1.60.Final-linux-x86_64.jar:/Users/testingautomation/.m2/repository/io/netty/netty-transport-native-kqueue/4.1.60.Final/netty-transport-native-kqueue-4.1.60.Final-osx-x86_64.jar:/Users/testingautomation/.m2/repository/com/typesafe/netty/netty-reactive-streams/2.0.4/netty-reactive-streams-2.0.4.jar:/Users/testingautomation/.m2/repository/com/sun/activation/jakarta.activation/1.2.2/jakarta.activation-1.2.2.jar:/Users/testingautomation/.m2/repository/org/seleniumhq/selenium/selenium-safari-driver/4.11.0/selenium-safari-driver-4.11.0.jar:/Users/testingautomation/.m2/repository/org/seleniumhq/selenium/selenium-support/4.11.0/selenium-support-4.11.0.jar:/Users/testingautomation/.m2/repository/io/github/bonigarcia/webdrivermanager/5.8.0/webdrivermanager-5.8.0.jar:/Users/testingautomation/.m2/repository/com/google/code/gson/gson/2.10.1/gson-2.10.1.jar:/Users/testingautomation/.m2/repository/com/github/docker-java/docker-java/3.3.6/docker-java-3.3.6.jar:/Users/testingautomation/.m2/repository/com/github/docker-java/docker-java-core/3.3.6/docker-java-core-3.3.6.jar:/Users/testingautomation/.m2/repository/com/github/docker-java/docker-java-api/3.3.6/docker-java-api-3.3.6.jar:/Users/testingautomation/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.10.3/jackson-annotations-2.10.3.jar:/Users/testingautomation/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.10.3/jackson-databind-2.10.3.jar:/Users/testingautomation/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.10.3/jackson-core-2.10.3.jar:/Users/testingautomation/.m2/repository/org/bouncycastle/bcpkix-jdk18on/1.76/bcpkix-jdk18on-1.76.jar:/Users/testingautomation/.m2/repository/org/bouncycastle/bcprov-jdk18on/1.76/bcprov-jdk18on-1.76.jar:/Users/testingautomation/.m2/repository/org/bouncycastle/bcutil-jdk18on/1.76/bcutil-jdk18on-1.76.jar:/Users/testingautomation/.m2/repository/org/slf4j/jcl-over-slf4j/1.7.30/jcl-over-slf4j-1.7.30.jar:/Users/testingautomation/.m2/repository/com/github/docker-java/docker-java-transport-httpclient5/3.3.6/docker-java-transport-httpclient5-3.3.6.jar:/Users/testingautomation/.m2/repository/com/github/docker-java/docker-java-transport/3.3.6/docker-java-transport-3.3.6.jar:/Users/testingautomation/.m2/repository/net/java/dev/jna/jna/5.13.0/jna-5.13.0.jar:/Users/testingautomation/.m2/repository/org/brotli/dec/0.1.2/dec-0.1.2.jar:/Users/testingautomation/.m2/repository/org/apache/commons/commons-lang3/3.14.0/commons-lang3-3.14.0.jar:/Users/testingautomation/.m2/repository/org/apache/commons/commons-compress/1.26.1/commons-compress-1.26.1.jar:/Users/testingautomation/.m2/repository/org/apache/httpcomponents/client5/httpclient5/5.2.1/httpclient5-5.2.1.jar:/Users/testingautomation/.m2/repository/org/apache/httpcomponents/core5/httpcore5/5.2/httpcore5-5.2.jar:/Users/testingautomation/.m2/repository/org/apache/httpcomponents/core5/httpcore5-h2/5.2/httpcore5-h2-5.2.jar:/Users/testingautomation/.m2/repository/com/aventstack/extentreports/5.1.2/extentreports-5.1.2.jar:/Users/testingautomation/.m2/repository/io/reactivex/rxjava3/rxjava/3.1.6/rxjava-3.1.6.jar:/Users/testingautomation/.m2/repository/org/reactivestreams/reactive-streams/1.0.4/reactive-streams-1.0.4.jar:/Users/testingautomation/.m2/repository/org/freemarker/freemarker/2.3.32/freemarker-2.3.32.jar:/Users/testingautomation/.m2/repository/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.jar:/Users/testingautomation/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/Users/testingautomation/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/Users/testingautomation/.m2/repository/org/testng/testng/7.7.1/testng-7.7.1.jar:/Users/testingautomation/.m2/repository/com/beust/jcommander/1.82/jcommander-1.82.jar:/Users/testingautomation/.m2/repository/org/webjars/jquery/3.6.1/jquery-3.6.1.jar:/Users/testingautomation/.m2/repository/io/appium/java-client/8.3.0/java-client-8.3.0.jar:/Users/testingautomation/.m2/repository/cglib/cglib/3.3.0/cglib-3.3.0.jar:/Users/testingautomation/.m2/repository/org/ow2/asm/asm/7.1/asm-7.1.jar:/Users/testingautomation/.m2/repository/commons-validator/commons-validator/1.7/commons-validator-1.7.jar:/Users/testingautomation/.m2/repository/commons-beanutils/commons-beanutils/1.9.4/commons-beanutils-1.9.4.jar:/Users/testingautomation/.m2/repository/commons-digester/commons-digester/2.1/commons-digester-2.1.jar:/Users/testingautomation/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/Users/testingautomation/.m2/repository/commons-collections/commons-collections/3.2.2/commons-collections-3.2.2.jar:/Users/testingautomation/.m2/repository/org/apache/poi/poi/5.2.2/poi-5.2.2.jar:/Users/testingautomation/.m2/repository/commons-codec/commons-codec/1.15/commons-codec-1.15.jar:/Users/testingautomation/.m2/repository/org/apache/commons/commons-collections4/4.4/commons-collections4-4.4.jar:/Users/testingautomation/.m2/repository/org/apache/commons/commons-math3/3.6.1/commons-math3-3.6.1.jar:/Users/testingautomation/.m2/repository/com/zaxxer/SparseBitSet/1.2/SparseBitSet-1.2.jar:/Users/testingautomation/.m2/repository/org/apache/logging/log4j/log4j-api/2.17.2/log4j-api-2.17.2.jar:/Users/testingautomation/.m2/repository/org/apache/poi/poi-ooxml/5.2.3/poi-ooxml-5.2.3.jar:/Users/testingautomation/.m2/repository/org/apache/poi/poi-ooxml-lite/5.2.3/poi-ooxml-lite-5.2.3.jar:/Users/testingautomation/.m2/repository/org/apache/xmlbeans/xmlbeans/5.1.1/xmlbeans-5.1.1.jar:/Users/testingautomation/.m2/repository/com/github/virtuald/curvesapi/1.07/curvesapi-1.07.jar:/Users/testingautomation/.m2/repository/commons-io/commons-io/2.13.0/commons-io-2.13.0.jar:/Users/testingautomation/.m2/repository/org/projectlombok/lombok/1.18.24/lombok-1.18.24.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/Users/testingautomation"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2024-04-16"/>
+    <property name="java.home" value="/Users/testingautomation/Library/Java/JavaVirtualMachines/corretto-17.0.11/Contents/Home"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/Users/testingautomation/Lyca/Mobile_Automation"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="/Users/testingautomation/Lyca/Mobile_Automation/target/surefire/surefirebooter-20250224171710185_3.jar"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="java.runtime.version" value="17.0.11+9-LTS"/>
+    <property name="user.name" value="testingautomation"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="15.1.1"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="Corretto-17.0.11.9.1"/>
+    <property name="localRepository" value="/Users/testingautomation/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://github.com/corretto/corretto-17/issues/"/>
+    <property name="java.io.tmpdir" value="/var/folders/h6/3hj4ls_95pv3crcbpy4pwjlw0000gp/T/"/>
+    <property name="java.version" value="17.0.11"/>
+    <property name="user.dir" value="/Users/testingautomation/Lyca/Mobile_Automation"/>
+    <property name="os.arch" value="aarch64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="ANDROID_SDK_ROOT" value="/Users/testingautomation/Library/Android/sdk"/>
+    <property name="native.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/Users/testingautomation/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.vendor" value="Amazon.com Inc."/>
+    <property name="java.vm.version" value="17.0.11+9-LTS"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="java.class.version" value="61.0"/>
+  </properties>
+  <testcase name="verify_login" classname="test.Verify_Login_Scenarios" time="0.004">
+    <system-out><![CDATA[Desired capability for Android: 
+{appPackage=com.kolonizer.sales, appActivity=com.kolonizer.sales.MainActivity, noReset=false, setAutoGrantPermissions=false, platformVersion=15, platformName=Android, deviceName=emulator-5554, fullReset=false, setNewCommandTimeout=120}
+:-------------------------------------------------------------------------------------------------------:
+Android App Launched!
+Waiting for element: Notification button  for [3 sec] | Found in [1422 ms]
+Clicked on: Notification button 
+:-------------------------------------------------------------------------------------------------------:
+Waiting for element: Skip button  for [15 sec] | Found in [1200 ms]
+Clicked on: Skip button 
+:-------------------------------------------------------------------------------------------------------:
+Waiting for element: Continue to login button  for [15 sec] | Found in [679 ms]
+Clicked on: Continue to login button 
+:-------------------------------------------------------------------------------------------------------:
+Waiting for element: email tab  for [15 sec] | Found in [73 ms]
+Sent keys to: email tab 
+:-------------------------------------------------------------------------------------------------------:
+Waiting for element: Password tab  for [15 sec] | Found in [617 ms]
+Sent keys to: Password tab 
+:-------------------------------------------------------------------------------------------------------:
+Waiting for element: Login button  for [15 sec] | Found in [594 ms]
+Clicked on: Login button 
+:-------------------------------------------------------------------------------------------------------:
+Waiting for element: Close pop up icon button  for [5 sec] | Element not found within timeout
+Not displayed, skipping: Close pop up icon button 
+:-------------------------------------------------------------------------------------------------------:
+Waiting for element:  for [10 sec] | Found in [88 ms]
+Waiting for element:  for [10 sec] | Found in [81 ms]
+Scroll by coordiante: From[1257,814] --> To[348,814]
+]]></system-out>
+    <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+ERROR StatusLogger Log4j2 could not find a logging implementation. Please add log4j-core to the classpath. Using SimpleLogger to log to the console...
+]]></system-err>
+  </testcase>
+  <testcase name="verify_logout" classname="test.Verify_Login_Scenarios" time="3.587">
+    <system-out><![CDATA[Waiting for element: Profile dashboard menu list icon button  for [15 sec] | Found in [1261 ms]
+Clicked on: Profile dashboard menu list icon button 
+:-------------------------------------------------------------------------------------------------------:
+Waiting for element: logout profile menu list icon button  for [15 sec] | Found in [74 ms]
+Clicked on: logout profile menu list icon button 
+:-------------------------------------------------------------------------------------------------------:
+Waiting for element: Confirm warning pop up button  for [15 sec] | Found in [67 ms]
+Clicked on: Confirm warning pop up button 
+:-------------------------------------------------------------------------------------------------------:
+]]></system-out>
+  </testcase>
+  <testcase name="verify_collection_dashboard_scenarioss" classname="test.Verify_Collaction_Dashboard_Scenarios" time="49.927">
+    <failure message="Customer names are not in alphabetical order: Lists differ at element [0]: Abdul Rahman != Milind pagare expected [Abdul Rahman] but found [Milind pagare]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: Customer names are not in alphabetical order: Lists differ at element [0]: Abdul Rahman != Milind pagare expected [Abdul Rahman] but found [Milind pagare]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1577)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:1643)
+	at pom.CollectionDashboard.handle_customer_name_dropdown_list(CollectionDashboard.java:87)
+	at test.Verify_Collaction_Dashboard_Scenarios.verify_collection_dashboard_scenarioss(Verify_Collaction_Dashboard_Scenarios.java:11)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]></failure>
+    <system-out><![CDATA[Quit driver successfully
+Desired capability for Android: 
+{appPackage=com.kolonizer.sales, appActivity=com.kolonizer.sales.MainActivity, noReset=false, setAutoGrantPermissions=false, platformVersion=15, platformName=Android, deviceName=emulator-5554, fullReset=false, setNewCommandTimeout=120}
+:-------------------------------------------------------------------------------------------------------:
+Android App Launched!
+Waiting for element: Notification button  for [3 sec] | Found in [1554 ms]
+Clicked on: Notification button 
+:-------------------------------------------------------------------------------------------------------:
+Waiting for element: Skip button  for [15 sec] | Found in [594 ms]
+Clicked on: Skip button 
+:-------------------------------------------------------------------------------------------------------:
+Waiting for element: Continue to login button  for [15 sec] | Found in [78 ms]
+Clicked on: Continue to login button 
+:-------------------------------------------------------------------------------------------------------:
+Waiting for element: email tab  for [15 sec] | Found in [76 ms]
+Sent keys to: email tab 
+:-------------------------------------------------------------------------------------------------------:
+Waiting for element: Password tab  for [15 sec] | Found in [595 ms]
+Sent keys to: Password tab 
+:-------------------------------------------------------------------------------------------------------:
+Waiting for element: Login button  for [15 sec] | Found in [616 ms]
+Clicked on: Login button 
+:-------------------------------------------------------------------------------------------------------:
+Waiting for element: Close pop up icon button  for [5 sec] | Element not found within timeout
+Not displayed, skipping: Close pop up icon button 
+:-------------------------------------------------------------------------------------------------------:
+Waiting for element:  for [10 sec] | Found in [85 ms]
+Waiting for element:  for [10 sec] | Found in [87 ms]
+Scroll by coordiante: From[1257,814] --> To[348,814]
+Waiting for element: Receivable [Finance] button is  for [15 sec] | Found in [758 ms]
+Clicked on: Receivable [Finance] button is 
+:-------------------------------------------------------------------------------------------------------:
+Waiting for element: Overdue [Receivable] button is  for [15 sec] | Found in [77 ms]
+Clicked on: Overdue [Receivable] button is 
+:-------------------------------------------------------------------------------------------------------:
+Waiting for element: Filter icon button is  for [15 sec] | Found in [258 ms]
+Clicked on: Filter icon button is 
+:-------------------------------------------------------------------------------------------------------:
+Waiting for element: Customer Name Filter menu list is  for [15 sec] | Found in [70 ms]
+Clicked on: Customer Name Filter menu list is 
+:-------------------------------------------------------------------------------------------------------:
+Waiting for element: Customer Name dropdown is  for [15 sec] | Found in [75 ms]
+Clicked on: Customer Name dropdown is 
+:-------------------------------------------------------------------------------------------------------:
+Initial dropdown list size: 7
+Last Processed:  | Current Processed: Milind pagare
+Waiting for element:  for [10 sec] | Found in [17 ms]
+Waiting for element:  for [10 sec] | Found in [18 ms]
+Scroll by coordiante: From[720,1669] --> To[720,1081]
+===============================================================================
+Last Processed: Milind pagare | Current Processed: sachin test1
+Waiting for element:  for [10 sec] | Found in [21 ms]
+Waiting for element:  for [10 sec] | Found in [16 ms]
+Scroll by coordiante: From[720,1705] --> To[720,1001]
+===============================================================================
+Last Processed: sachin test1 | Current Processed: vsbs sbsb
+Waiting for element:  for [10 sec] | Found in [18 ms]
+Waiting for element:  for [10 sec] | Found in [20 ms]
+Scroll by coordiante: From[720,1574] --> To[720,1033]
+===============================================================================
+Last Processed: vsbs sbsb | Current Processed: Deepak abaXOlX
+Waiting for element:  for [10 sec] | Found in [20 ms]
+Waiting for element:  for [10 sec] | Found in [17 ms]
+Scroll by coordiante: From[720,1654] --> To[720,1073]
+===============================================================================
+Last Processed: Deepak abaXOlX | Current Processed: Deepak abcvEia
+Waiting for element:  for [10 sec] | Found in [17 ms]
+Waiting for element:  for [10 sec] | Found in [18 ms]
+Scroll by coordiante: From[720,1696] --> To[720,996]
+===============================================================================
+Last Processed: Deepak abcvEia | Current Processed: Deepak abNPdEd
+Waiting for element:  for [10 sec] | Found in [32 ms]
+Waiting for element:  for [10 sec] | Found in [32 ms]
+Scroll by coordiante: From[720,1569] --> To[720,1031]
+===============================================================================
+Last Processed: Deepak abNPdEd | Current Processed: Deepak abyAcFX
+Waiting for element:  for [10 sec] | Found in [37 ms]
+Waiting for element:  for [10 sec] | Found in [43 ms]
+Scroll by coordiante: From[720,1652] --> To[720,1072]
+===============================================================================
+Last Processed: Deepak abyAcFX | Current Processed: Vvv Van
+Waiting for element:  for [10 sec] | Found in [32 ms]
+Waiting for element:  for [10 sec] | Found in [29 ms]
+Scroll by coordiante: From[720,1710] --> To[720,1003]
+===============================================================================
+Last Processed: Vvv Van | Current Processed: Apirva Sen
+Waiting for element:  for [10 sec] | Found in [18 ms]
+Waiting for element:  for [10 sec] | Found in [14 ms]
+Scroll by coordiante: From[720,1620] --> To[720,1056]
+===============================================================================
+Last Processed: Apirva Sen | Current Processed: Mahi A
+Waiting for element:  for [10 sec] | Found in [16 ms]
+Waiting for element:  for [10 sec] | Found in [22 ms]
+Scroll by coordiante: From[720,1678] --> To[720,987]
+===============================================================================
+Last Processed: Mahi A | Current Processed: Jivan ebe
+Waiting for element:  for [10 sec] | Found in [17 ms]
+Waiting for element:  for [10 sec] | Found in [15 ms]
+Scroll by coordiante: From[720,1558] --> To[720,1025]
+===============================================================================
+Last Processed: Jivan ebe | Current Processed: Xyz Cistkjsd
+Waiting for element:  for [10 sec] | Found in [15 ms]
+Waiting for element:  for [10 sec] | Found in [17 ms]
+Scroll by coordiante: From[720,1646] --> To[720,1069]
+===============================================================================
+Last Processed: Xyz Cistkjsd | Current Processed: raj ahaj
+Waiting for element:  for [10 sec] | Found in [16 ms]
+Waiting for element:  for [10 sec] | Found in [15 ms]
+Scroll by coordiante: From[720,1692] --> To[720,994]
+===============================================================================
+Last Processed: raj ahaj | Current Processed: naru kolo
+Waiting for element:  for [10 sec] | Found in [20 ms]
+Waiting for element:  for [10 sec] | Found in [19 ms]
+Scroll by coordiante: From[720,1567] --> To[720,1030]
+===============================================================================
+Last Processed: naru kolo | Current Processed: Kajal Prasad
+Waiting for element:  for [10 sec] | Found in [22 ms]
+Waiting for element:  for [10 sec] | Found in [18 ms]
+Scroll by coordiante: From[720,1651] --> To[720,1072]
+===============================================================================
+Last Processed: Kajal Prasad | Current Processed: Vani Kulkarni
+Waiting for element:  for [10 sec] | Found in [20 ms]
+Waiting for element:  for [10 sec] | Found in [19 ms]
+Scroll by coordiante: From[720,1695] --> To[720,996]
+===============================================================================
+Last Processed: Vani Kulkarni | Current Processed: Shivani Taneja
+Waiting for element:  for [10 sec] | Found in [19 ms]
+Waiting for element:  for [10 sec] | Found in [19 ms]
+Scroll by coordiante: From[720,1566] --> To[720,1029]
+===============================================================================
+Last Processed: Shivani Taneja | Current Processed: Suman Mali
+Waiting for element:  for [10 sec] | Found in [16 ms]
+Waiting for element:  for [10 sec] | Found in [16 ms]
+Scroll by coordiante: From[720,1650] --> To[720,1071]
+===============================================================================
+Last Processed: Suman Mali | Current Processed: Parth Thakur
+Waiting for element:  for [10 sec] | Found in [21 ms]
+Waiting for element:  for [10 sec] | Found in [18 ms]
+Scroll by coordiante: From[720,1695] --> To[720,996]
+===============================================================================
+Last Processed: Parth Thakur | Current Processed: Vivek Chhabra
+Waiting for element:  for [10 sec] | Found in [23 ms]
+Waiting for element:  for [10 sec] | Found in [19 ms]
+Scroll by coordiante: From[720,1568] --> To[720,1030]
+===============================================================================
+Last Processed: Vivek Chhabra | Current Processed: demo test
+Waiting for element:  for [10 sec] | Found in [20 ms]
+Waiting for element:  for [10 sec] | Found in [19 ms]
+Scroll by coordiante: From[720,1651] --> To[720,1072]
+===============================================================================
+Last Processed: demo test | Current Processed: Mangesh Mohan
+Waiting for element:  for [10 sec] | Found in [17 ms]
+Waiting for element:  for [10 sec] | Found in [17 ms]
+Scroll by coordiante: From[720,1519] --> To[720,1006]
+===============================================================================
+Last Processed: Mangesh Mohan | Current Processed: Mangesh Mohan
+Extracted Customer Names: [Milind pagare, milind pgar, sachin test1, Shubham ch, Jones Cena, xczxc sdzsa, vsbs sbsb, gsgs svvsv, Deepak abaXOlX, Deepak abQzbWP, Deepak abcvEia, Deepak abfAQOl, Sachin Minde, Deepak abJfKQi, Deepak abNPdEd, Deepak abfnMXk, Deepak abEDQfa, Deepak abyAcFX, Deepak abWuSiB, Deepak ablEoWm, Dumy L, Vvv Van, customer dummy, mahir customer, narendra customer, Apirva Sen, Sdsa Dsad, Mahi A, Test Customer, gshhs dbdhh, Mr. Rahul Jain, Jivan ebe, Test one, Sarvesh sa, Xyz Cistkjsd, yug hjhj, raj ahaj, sneha khan, jitender sukla, narendra kolo, naru kolo, Abdul Rahman, Saif Siddiqui, Kajal Prasad, Sneha Bose, Vani Kulkarni, Seema Rajput, Shreya Iyengar, Sameer Narula, Shivani Taneja, Uma Bajaj, Dhruv Viswanathan, Suman Mali, Neeraj Pathak, Parth Thakur, Nisha Saxena, Pallavi Swaminathan, Madhur Nair, Vivek Chhabra, Preeti Thakur, Vikas Sen, demo test, rajesh Sharma, Mangesh Mohan, sachin chine, sdsa ssa, sadas sdsa, gsghs sbzbbs, gsghs sbbs, gshs zhhs]
+Sorted Customer Names: [Abdul Rahman, Apirva Sen, Deepak abEDQfa, Deepak abJfKQi, Deepak abNPdEd, Deepak abQzbWP, Deepak abWuSiB, Deepak abaXOlX, Deepak abcvEia, Deepak abfAQOl, Deepak abfnMXk, Deepak ablEoWm, Deepak abyAcFX, Dhruv Viswanathan, Dumy L, Jivan ebe, Jones Cena, Kajal Prasad, Madhur Nair, Mahi A, Mangesh Mohan, Milind pagare, Mr. Rahul Jain, Neeraj Pathak, Nisha Saxena, Pallavi Swaminathan, Parth Thakur, Preeti Thakur, Sachin Minde, Saif Siddiqui, Sameer Narula, Sarvesh sa, Sdsa Dsad, Seema Rajput, Shivani Taneja, Shreya Iyengar, Shubham ch, Sneha Bose, Suman Mali, Test Customer, Test one, Uma Bajaj, Vani Kulkarni, Vikas Sen, Vivek Chhabra, Vvv Van, Xyz Cistkjsd, customer dummy, demo test, gsghs sbbs, gsghs sbzbbs, gsgs svvsv, gshhs dbdhh, gshs zhhs, jitender sukla, mahir customer, milind pgar, narendra customer, narendra kolo, naru kolo, raj ahaj, rajesh Sharma, sachin chine, sachin test1, sadas sdsa, sdsa ssa, sneha khan, vsbs sbsb, xczxc sdzsa, yug hjhj]
+]]></system-out>
+  </testcase>
+</testsuite>
