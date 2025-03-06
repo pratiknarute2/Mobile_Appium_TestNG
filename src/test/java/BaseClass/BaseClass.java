@@ -2,16 +2,22 @@ package BaseClass;
 
 import com.aventstack.extentreports.*;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
+import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.service.local.AppiumDriverLocalService;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.io.FileHandler;
 import org.testng.ITestResult;
 import org.testng.annotations.*;
 import pom.LoginPage;
 import utility.Driver;
 import utility.Utility;
+
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.net.MalformedURLException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -19,14 +25,23 @@ import java.util.Date;
 public class BaseClass extends Utility {
     String OS = "Android";
     String deviceName = "5554";
-    private static ExtentReports extent;
-    private ExtentTest test;
+
+    public static AppiumDriverLocalService service;
+    public static ExtentReports report;
+    public static ExtentTest test;
+    public static ExtentSparkReporter spark;
+    String screenshotPath = getCurrentDirectory()+"/screenshots/failed.png";
+    public static String appiumJsPath="";
 
     @BeforeSuite
-    public void setupExtentReport() {
-        ExtentSparkReporter sparkReporter = new ExtentSparkReporter("ExtentReport.html");
-        extent = new ExtentReports();
-        extent.attachReporter(sparkReporter);
+    public void setupExtentReport() throws IOException {
+        System.out.println("Screenshot path: "+screenshotPath);
+		System.out.println("Conncected device: "+getDeviceName());
+		System.out.println("AppiumJs Path: "+getAppiumJsPath());
+
+        report = new ExtentReports(); // To generate extent report
+        spark = new ExtentSparkReporter("Extent Report/report.html");  //Set path in system for attach the generated report
+        report.attachReporter(spark); //To attach generated report into selec
     }
 
     @BeforeClass
@@ -41,71 +56,99 @@ public class BaseClass extends Utility {
     @AfterClass
     public void tearDown() throws InterruptedException {
         quitDriver();
+//        service.stop();
     }
 
-//    @AfterMethod
-//    public void attachScreenshot(ITestResult result) {
-//        test = extent.createTest(result.getMethod().getMethodName());
-//
-//        if (result.getStatus() == ITestResult.FAILURE) {
-//            String screenshotPath = takeScreenshot(result.getMethod().getMethodName());
-//
-//            // Debugging: Print Screenshot Path
-//            System.out.println("Screenshot saved at: " + screenshotPath);
-//
-//            File file = new File(screenshotPath);
-//            if (file.exists()) {
-//                try {
-//                    // Ensure path uses double backslashes in Windows
-//                    String correctedPath = screenshotPath.replace("\\", "/");
-//
-//                    // Attach Screenshot to Extent Report
-//                    test.fail("Screenshot of failure",
-//                            MediaEntityBuilder.createScreenCaptureFromPath(correctedPath).build());
-//
-//                    System.out.println("✅ Screenshot attached successfully!");
-//                } catch (Exception e) {
-//                    test.fail("❌ Failed to attach screenshot: " + e.getMessage());
-//                }
-//            } else {
-//                test.fail("❌ Screenshot NOT found at: " + screenshotPath);
-//            }
-//
-//            test.fail("Test Failed: " + result.getThrowable());
-//        }
-//    }
+    @AfterMethod
+    public void attachScreenshot(ITestResult result) throws IOException, InterruptedException {
+        test = report.createTest(result.getMethod().getMethodName())
+                .assignCategory(result.getTestClass().getName())
+                .assignAuthor("Pratik")
+                .assignDevice("Windows");
 
+        if (result.getStatus() == ITestResult.FAILURE) {
+            String screenshotFile = System.getProperty("user.dir") + "/screenshots/" + result.getMethod().getMethodName() + ".png";
+            File drag = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+            File dropPath = new File(screenshotFile);
+            FileHandler.copy(drag, dropPath);
 
+            // Wait for the file to be written
+            Thread.sleep(1000);
 
-//    // Method to take a screenshot
-//    public String takeScreenshot(String methodName) {
-//        File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-//        String timestamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
-//
-//        String screenshotDir = System.getProperty("user.dir") + "/screenshots/";
-//        File directory = new File(screenshotDir);
-//        if (!directory.exists()) {
-//            directory.mkdirs();
-//        }
-//
-//        String screenshotPath = screenshotDir + methodName + "_" + timestamp + ".png";
-//        File destination = new File(screenshotPath);
-//
-//        try {
-//            FileUtils.copyFile(src, destination);
-//            System.out.println("✅ Screenshot captured: " + screenshotPath);
-//        } catch (IOException e) {
-//            System.out.println("❌ Failed to save screenshot: " + e.getMessage());
-//        }
-//
-//        return destination.getAbsolutePath();
-//    }
+            if (dropPath.exists()) {
+//                test.fail("Test case failed", MediaEntityBuilder.createScreenCaptureFromPath(screenshotFile).build());
+                String base64Screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BASE64);
+                test.fail("Test case failed", MediaEntityBuilder.createScreenCaptureFromBase64String(base64Screenshot).build());
+
+            } else {
+                test.fail("Screenshot not found!");
+            }
+
+            test.log(Status.FAIL, result.getThrowable());
+        } else {
+            test.log(Status.PASS, "Test case passed");
+        }
+        report.flush();
+    }
+
 
 
 
     @AfterSuite
     public void tearDownExtentReport() {
-//        extent.flush();  // ✅ Finalize report
+    }
+
+    public  String getDeviceName() throws IOException {
+        try {
+            // Execute the adb command to list connected devices
+            Process process = Runtime.getRuntime().exec("adb devices");
+
+            // Read the output of the command
+            BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
+            String line;
+            System.out.println("deviceName: "+reader.readLine());
+            boolean devicesListStarted = false;
+            while ((line = reader.readLine()) != null) {
+                if (devicesListStarted && !line.isEmpty() && !line.startsWith("*")) {
+                    // Extract device name from the output
+                    deviceName = line.split("\\s+")[0];
+                }
+                if (!devicesListStarted && line.contains("List of devices attached")) {
+                    devicesListStarted = true;
+                }
+            }
+
+            // Close the reader
+            reader.close();
+
+            // Wait for the process to finish
+            process.waitFor();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return deviceName;
+    }
+    public static String getAppiumJsPath() throws IOException {
+        try {
+            // Execute the where appium command to know the dir
+            Process process = Runtime.getRuntime().exec("where appium");
+
+            // Read the output of the command
+            BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
+            String commandOutput = reader.readLine();
+            System.out.println("commandOutput: "+commandOutput);
+            appiumJsPath=commandOutput.replace("/bin/appium", "/lib/node_modules/appium/build/lib/main.js");
+            System.out.println("appiumJsPath: "+appiumJsPath);
+
+            // Close the reader
+            reader.close();
+
+            // Wait for the process to finish
+            process.waitFor();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return appiumJsPath;
     }
 
 }

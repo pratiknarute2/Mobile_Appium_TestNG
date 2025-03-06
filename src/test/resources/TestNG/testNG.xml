@@ -4,6 +4,7 @@
     <test name="Test 1">
         <classes>
             <class name="test.Verify_Login_Scenarios"/>
+            <class name="test.Verify_Collaction_Dashboard_Scenarios"/>
         </classes>
     </test>
 

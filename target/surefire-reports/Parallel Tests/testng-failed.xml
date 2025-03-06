@@ -3,15 +3,17 @@
 <suite data-provider-thread-count="2" name="Failed suite [Parallel Tests]" guice-stage="DEVELOPMENT" verbose="0">
   <test thread-count="5" name="Test 1(failed)" verbose="0">
     <classes>
-      <class name="test.Verify_Collaction_Dashboard_Scenarios">
+      <class name="test.Verify_Login_Scenarios">
         <methods>
           <include name="login"/>
+          <include name="verify_login"/>
           <include name="tearDown"/>
-          <include name="verify_collection_dashboard_scenarioss"/>
+          <include name="attachScreenshot"/>
+          <include name="verify_logout"/>
           <include name="setupExtentReport"/>
           <include name="tearDownExtentReport"/>
         </methods>
-      </class> <!-- test.Verify_Collaction_Dashboard_Scenarios -->
+      </class> <!-- test.Verify_Login_Scenarios -->
     </classes>
   </test> <!-- Test 1(failed) -->
 </suite> <!-- Failed suite [Parallel Tests] -->
