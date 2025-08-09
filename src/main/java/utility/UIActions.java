@@ -1,5 +1,6 @@
 package utility;
 
+import com.google.common.collect.ImmutableMap;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.PointerInput;
 import org.openqa.selenium.interactions.Sequence;
@@ -15,35 +16,25 @@ import java.util.HashMap;
 public class UIActions extends Driver {
 
     public void click(WebElement el, String errorMessage) throws InterruptedException {
-        try {
-            explicitlyWait(el, 15, errorMessage);
-            el.click();
-            System.out.println("Clicked on: " + errorMessage.replace("missing", ""));
-        }catch (NoSuchElementException noSuchElementException){
-            System.out.println("\nRetrying click due to NoSuchElementException...");
-            Thread.sleep(3000);
             try {
+                explicitlyWait(el, 15, errorMessage);  // Wait until element is ready
                 el.click();
                 System.out.println("Clicked on: " + errorMessage.replace("missing", ""));
-            }catch (NoSuchElementException e){
-                Assert.fail(errorMessage + " | " + e.getMessage());
+                System.out.println(":-------------------------------------------------------------------------------------------------------:");
+                return; // Success: exit method immediately, no failure
+            } catch (NoSuchElementException | StaleElementReferenceException e) {
+                System.out.println("\nRetrying click due to " + e.getClass().getSimpleName() + "...");
+                System.out.println(":-------------------------------------------------------------------------------------------------------:");
+                Thread.sleep(3000); // Wait before retrying
+            } catch (TimeoutException e) {
+                Assert.fail(errorMessage + " | TimeoutException: " + e.getMessage());
+                return;
             }
 
-        } catch (StaleElementReferenceException e) {
-            System.out.println("\nRetrying click due to StaleElementReferenceException...");
-            Thread.sleep(3000);
-//            el = driver.findElement(By.xpath(el.toString().split("-> ")[1])); // Re-fetch elementel.click();
-            try {
-                el.click();
-                System.out.println("Clicked on: " + errorMessage.replace("missing", ""));
-            }catch (StaleElementReferenceException staleElementReferenceException){
-                Assert.fail(errorMessage + " | " + staleElementReferenceException.getMessage());
-            }
-        } catch (TimeoutException e) {
-            Assert.fail(errorMessage + " | " + e.getMessage());
-        }
+
         System.out.println(":-------------------------------------------------------------------------------------------------------:");
     }
+
 
     public void clickIfDisplayed(WebElement el, int waitForSec, String errorMessage) {
         try {
@@ -61,16 +52,14 @@ public class UIActions extends Driver {
     public void sendKeys(WebElement el, String input, String errorMessage) {
         try {
             explicitlyWait(el, 15, errorMessage);
-            el.click(); // Click only if not already focused
+            el.click();
             el.sendKeys(input);
             System.out.println("Sent keys to: " + errorMessage.replace("missing", ""));
-//            ((JavascriptExecutor) driver).executeScript("mobile: hideKeyboard");
         } catch (TimeoutException e) {
             Assert.fail(errorMessage + " | " + e.getMessage());
         }
         System.out.println(":-------------------------------------------------------------------------------------------------------:");
     }
-
 
     public void explicitlyWait(WebElement el, int durationInSec, String message) {
         LocalDateTime start = LocalDateTime.now();
