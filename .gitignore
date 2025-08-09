@@ -1,0 +1,22 @@
+# Maven target directory (compiled classes, jars, etc.)
+target/
+
+# IntelliJ IDEA files
+.idea/
+*.iml
+*.iws
+out/
+
+# MacOS system files
+.DS_Store
+
+# Log files
+*.log
+
+# Eclipse files (if any)
+.project
+.classpath
+.settings/
+
+# Environment variables or local config files (add your own if needed)
+.env
